@@ -1,7 +1,11 @@
+
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Sofia Sans', sans-serif;
 }
 
 svg{
@@ -11,8 +15,8 @@ svg{
 
 .container{
     display: grid;
-    grid-template-columns: 10vw 90vw;
-    grid-template-rows: 25vh 75vh;
+    grid-template-columns: minmax(187px, 10vw) minmax(90vw,1799px);
+    grid-template-rows: 15vh 85vh;
 }
 
 .dash{
@@ -30,7 +34,7 @@ svg{
     align-items: center;
     font-size: larger;
 
-    background-color: rgb(227, 221, 237);
+    background-color: rgb(240, 203, 155);
 
     box-shadow: 2px 2px 2px 1px gray;
 
@@ -42,8 +46,12 @@ svg{
     padding: 10px;
     position: relative;
     bottom: 3px;
-    box-shadow: 1px 1px 1px 1px rgb(220, 214, 231);
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
 
+}
+
+:hover.dashIcon span{
+    background-color: rgb(127, 189, 189);
 }
 
 .bigDashIcon{
@@ -57,34 +65,84 @@ svg{
     /* for itself */
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(127, 189, 189);
+    justify-items: end;
+    align-items: center;
+    padding-bottom: 30px;
+    box-shadow: 2px 2px 2px 1px gray;
     
 }
 
-.headerTop{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    
+
+.search{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px ;
 }
 
 
 
 .searchBar{
-    width: 50vw;
-    height: 20px;
-    background-color: rgb(199, 169, 169);
+    width: 10vw;
+    height: 30px;
+    background-color: rgb(69, 69, 69);
     border-radius: 25px;
+    
+
+}
+
+
+.profilePic{
+    height:40px;
+    border-radius: 50px;
+}
+
+
+.userTop{
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
     justify-self: end;
-    position: relative;
+    align-items: center;
+    padding: 10px;
 
 }
 
 
 
+.user{
+    padding-left: 20px ;
+    margin-top: 20px;
+    justify-self: end;
+}
 
 
+.user span{
+    font-weight: 700;
+    
+}
 
+
+.contentbuttons{
+    padding-top: 20px;
+    justify-self: end;
+}
+
+.contentbuttons button{
+    padding: 20px 30px;
+    margin: 0 10px;
+    border-radius: 50px;
+    border: solid 2px black;
+}
+
+
+.contentbuttons button:hover {
+    background-color:rgb(127, 189, 189);
+    border: solid 2px white;
+}
 
 
 
@@ -97,6 +155,7 @@ svg{
 .content{
     display:grid;
     grid-template-columns: 3fr 1fr;
+    align-content: center;
 }
 
 .leftContent{
@@ -105,6 +164,12 @@ svg{
     grid-template-rows: 1fr 5fr 5fr 5fr;
     
 }
+
+
+
+
+
+
 
 .contentHeader{
     grid-row: 1/2;
